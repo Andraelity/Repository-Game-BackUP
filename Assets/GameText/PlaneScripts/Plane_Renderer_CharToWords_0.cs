@@ -12,10 +12,13 @@ using ShaderName_Enum_Namespace;
 
 // public enum Direction {North, East, South, West};
 
-public class Plane_Renderer_001 : MonoBehaviour
+public class Plane_Renderer_CharToWords_0 : MonoBehaviour
 {
 
     // Start is called before the first frame update
+
+	public  bool bool_ActivePredefinedShader = false; 
+
 
 /////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////UPDATE INFORMATION ////////////////////////////////////////////////
@@ -648,11 +651,6 @@ public class Plane_Renderer_001 : MonoBehaviour
 			string[] nameShaderArray = StickerNameClass.GetShaderPathNameStringArray();
 			string[] nameShaderArrayTwo = StickerNameClass.GetShaderPathNameStringArrayTwo();
 
-			foreach(string writestring in nameShaderArray)
-			{
-				print(writestring);
-			}
-
 			int currentEnumValue = (int)shaderName_enum;
 			string nameShader_string ;
 			if(currentEnumValue < 50)
@@ -674,13 +672,29 @@ public class Plane_Renderer_001 : MonoBehaviour
 
 			pathShader_string = nameShader_string;
 
-			Shader shaderOnRuntime  = Shader.Find(nameShader_string);
+			Shader shaderOnRuntime  = Shader.Find(pathShader_string);
 			material.shader = shaderOnRuntime;
 	    	
 	    	material = DoRenderingMode(material);
 
 
 		}
+
+
+		if(bool_ActivePredefinedShader)
+		{
+			bool_ActivePredefinedShader = false;
+
+			pathShader_string = "ShaderBloom/ContainerShader-RainbowSpiral";
+
+			Shader shaderOnRuntime  = Shader.Find(pathShader_string);
+			material.shader = shaderOnRuntime;
+	    	
+	    	material = DoRenderingMode(material);
+
+		}
+
+
 
 		if(OverlaySelectionCurrent != OverlaySelection)
 		{

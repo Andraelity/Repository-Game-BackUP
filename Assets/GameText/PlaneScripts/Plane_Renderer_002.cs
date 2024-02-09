@@ -641,6 +641,7 @@ public class Plane_Renderer_002 : MonoBehaviour
 
 			LOADSHADERONRUNTIME = false;
 			StickerNameClass.SetShaderPathNameStringArray();
+			StickerNameClass.SetShaderPathNameStringArrayTwo();
 			string[] nameShaderArray = StickerNameClass.GetShaderPathNameStringArray();
 			string[] nameShaderArrayTwo = StickerNameClass.GetShaderPathNameStringArrayTwo();
 

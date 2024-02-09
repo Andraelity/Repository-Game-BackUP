@@ -10,7 +10,6 @@ using MainStickerState_Namespace;
 using StickerName_Namespace;
 using ShaderName_Enum_Namespace;
 
-// public enum Direction {North, East, South, West};
 using CommunicationCorrectAnswerNamespace;
 
 
@@ -646,6 +645,7 @@ public class Plane_Renderer_CorrectAnswer : MonoBehaviour
 
 			LOADSHADERONRUNTIME = false;
 			StickerNameClass.SetShaderPathNameStringArray();
+			StickerNameClass.SetShaderPathNameStringArrayTwo();
 			string[] nameShaderArray = StickerNameClass.GetShaderPathNameStringArray();
 			string[] nameShaderArrayTwo = StickerNameClass.GetShaderPathNameStringArrayTwo();
 
@@ -719,7 +719,9 @@ public class Plane_Renderer_CorrectAnswer : MonoBehaviour
 	
 				SetInitialValuesRef(ref variableShaderInfo);
 				currentStickerValue = (int) variableShaderInfo.StickerType;
+
 			}
+
 		}
 
 
@@ -735,7 +737,6 @@ public class Plane_Renderer_CorrectAnswer : MonoBehaviour
 		}
 
 
-    	// if(true)
     	if(bool_SetSmoothShade)
     	{
     		if(BorderBlurriness < 0)
@@ -743,7 +744,7 @@ public class Plane_Renderer_CorrectAnswer : MonoBehaviour
     			bool_SetSmoothShade = false;
     			// BorderBlurriness = 2.6f;
     		}
-    		BorderBlurriness -= 0.1f;
+    		BorderBlurriness -= 0.05f;
 
 			variableShaderInfo = new ShaderInfo
 			{

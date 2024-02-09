@@ -646,6 +646,7 @@ public class Plane_Renderer_CamaraShake : MonoBehaviour
 
 			LOADSHADERONRUNTIME = false;
 			StickerNameClass.SetShaderPathNameStringArray();
+			StickerNameClass.SetShaderPathNameStringArrayTwo();
 			string[] nameShaderArray = StickerNameClass.GetShaderPathNameStringArray();
 			string[] nameShaderArrayTwo = StickerNameClass.GetShaderPathNameStringArrayTwo();
 

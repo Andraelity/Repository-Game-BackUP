@@ -50,6 +50,7 @@ namespace StickerName_Namespace
 		public static string[] ShaderPathNameStringArrayOne;
 		public static string[] ShaderPathNameStringArrayTwo;
 
+		
 
 
 		public static void SetStickerNameStringArray()
@@ -236,7 +237,7 @@ namespace StickerName_Namespace
 				"ShaderBloom/ContainerShader-WorleyNoiseType",
 				"ShaderBloom/ContainerShader-ColoredBars",
 				"ShaderBloom/ContainerShader-FractalStyle",
-				"ShaderBloom/ContainerShader-Door",
+				"ShaderBloom/ContainerShader-Door"
 
 
 

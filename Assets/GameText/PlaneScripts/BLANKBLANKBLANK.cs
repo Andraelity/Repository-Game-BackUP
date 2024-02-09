@@ -12,7 +12,7 @@ using ShaderName_Enum_Namespace;
 
 // public enum Direction {North, East, South, West};
 
-public class Plane_Renderer_001 : MonoBehaviour
+public class BLANKBLANKBLANK : MonoBehaviour
 {
 
     // Start is called before the first frame update
